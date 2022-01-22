@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ewallet"
+    }
+  },
+  "defaultProject": "ewallet",
+  "cli": {
+    "analytics": "aa85623c-3fba-4b1d-b8a7-a53995f655dd"
+  }
 }

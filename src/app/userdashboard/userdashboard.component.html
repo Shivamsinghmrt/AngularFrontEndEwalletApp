@@ -1,0 +1,92 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h6 " >E-wallet!</span>
+  </nav>
+<div class="container">
+    <div class="jumbotron" style= "margin-top: 40px;">
+        <div class="card text-center">
+            <div class="card-header">
+              E-Wallet
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Welocome In The World Of Payments!</h5>
+              <p class="card-text">It's A Digital Wallet,Say Bye To The Cash Money!</p>
+      
+              <button type="button" id="updatebtn" class="btn btn-outline-primary" (click)="Update()">Update Details</button>&nbsp;&nbsp;
+              <button type="button" id="logoutbtn" class="btn btn-outline-secondary" (click)="Logout()"  >Logout</button>
+             
+                      
+            </div>
+            <div class="card-footer text-muted">
+              Thanks For Being Here!
+            </div>
+          </div>      
+    
+          
+          <form *ngIf="updatesection" #r="ngForm" (ngSubmit)="OnSubmit(LoginName1.value,UserFullName1.value,AadhaarNumber1.value,Password1.value)" >
+            <div class="form-group">
+                <label for="ln">Login Name:</label>
+                <input 
+                type="text"
+                id="LoginName1"
+                class="form-control"
+                 ngModel 
+                 #LoginName1  
+                value="{{loginName}}"
+                placeholder="{{loginName}}"
+                name="LoginName1"
+                 required>
+            </div>
+            <!--LoginName:string,UserFullName:string,AadhaarNumber:number,PhoneNumber:number,Password:string-->
+            <div class="form-group">
+                <label  for="ufn">User Full Name:</label>
+                <input
+                type="text"
+                id="UserFullName1"
+                class="form-control"
+                 ngModel 
+                 #UserFullName1  
+                 name="UserFullName1"
+                value="{{userName}}"
+                placeholder="{{userName}}"
+                 required>
+              </div>
+              
+          
+            <div class="form-group">
+                <label for="Aadharno">Aadhaar Number:</label>
+                <input 
+                type="number"
+                id="AadhaarNumber1"
+                class="form-control"
+                 ngModel 
+                 #AadhaarNumber1  
+                value="{{aadhaarNo}}"
+                placeholder="{{aadhaarNo}}"
+               name="AadhaarNumber1"
+                 
+                 required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input 
+                type="password"
+                id="Password1"
+                class="form-control"
+                 ngModel 
+                 #Password1  
+                value="{{password}}"
+                name="Password1"
+                placeholder="{{password}}"
+                  
+                 required>
+            </div>
+            <button type="submit" id="updatesubmit" class="btn btn-primary"  >Submit</button>
+        <!--[disabled]="!r.form.valid"-->
+          </form>
+
+          
+    </div>
+
+
+    
